@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router";
 
 const NavBar = () => {
     return (
@@ -6,9 +7,21 @@ const NavBar = () => {
             <nav className="bg-gray-800 p-4 flex justify-between items-center">
                 <div className="text-white text-lg font-bold">React Router</div>
                 <ul className="flex space-x-4">
-                    <li><a href="/" className="text-white hover:text-gray-400">Home</a></li>
-                    <li><a href="/about" className="text-white hover:text-gray-400">About</a></li>
-                    <li><a href="/features" className="text-white hover:text-gray-400">Features</a></li>
+                    <Link to="/" className="text-white hover:text-gray-400">
+                        Home
+                    </Link>
+                    <Link
+                        to="/about"
+                        className="text-white hover:text-gray-400"
+                    >
+                        About
+                    </Link>
+                    <Link
+                        to="/contact"
+                        className="text-white hover:text-gray-400"
+                    >
+                        Contact
+                    </Link>
                 </ul>
             </nav>
         </div>
