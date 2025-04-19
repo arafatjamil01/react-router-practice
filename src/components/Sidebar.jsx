@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Sidebar = () => {
     return (
@@ -8,18 +9,16 @@ const Sidebar = () => {
                 This is Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Sunt molestiae eaque quo id.
             </p>
+
             <ul>
-                <li>
-                    <a href="#">Canadian Meals</a>
-                    {/* https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian */}
+                <li className="mb-2">
+                    <Link to="/canadian_meals">Canadian Meals</Link>
                 </li>
-                <li>
-                    <a href="#">Single Random Meal</a>
-                    {/* https://www.themealdb.com/api/json/v1/1/random.php */}
+                <li className="mb-2">
+                    <Link to="/single_random_meal">Single Random Meal</Link>
                 </li>
-                <li>
-                    <a href="#">Meal Categories</a>
-                    {/* https://www.themealdb.com/api/json/v1/1/categories.php */}
+                <li className="mb-2">
+                    <Link to="/meal_categories">Meal Categories</Link>
                 </li>
             </ul>
         </div>

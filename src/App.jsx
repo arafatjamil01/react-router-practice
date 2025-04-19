@@ -5,8 +5,6 @@ import Footer from './components/Footer';
 import MainBody from './components/MainBody';
 import Sidebar from './components/Sidebar';
 
-
-
 function App() {
 
   return (

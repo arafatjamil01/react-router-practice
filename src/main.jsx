@@ -1,25 +1,36 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router";
+
 import "./index.css";
 import App from "./App.jsx";
 import About from "./components/about/About.jsx";
 import Contact from "./components/Contact.jsx";
 
-import { createBrowserRouter, RouterProvider } from "react-router";
+import CanadianMeals from "./components/meals/CanadianMeals.jsx";
+import MealCategories from "./components/meals/MealCategories.jsx";
+import SingleRandomMeal from "./components/meals/SingleRandomMeal.jsx";
+import MealLanding from "./components/meals/MealLanding.jsx";
 
 let router = createBrowserRouter([
     {
         path: "/",
         Component: App,
+        children: [
+            { index: true, Component: MealLanding },
+            { path: "/canadian_meals", Component: CanadianMeals },
+            { path: "/meal_categories", Component: MealCategories },
+            { path: "/single_random_meal", Component: SingleRandomMeal },
+        ],
     },
     {
-      path: '/about',
-      Component: About,
+        path: "/about",
+        Component: About,
     },
     {
-      path: "/contact",
-      element: <Contact />,
-    }
+        path: "/contact",
+        element: <Contact />,
+    },
 ]);
 
 createRoot(document.getElementById("root")).render(
