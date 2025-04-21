@@ -1,0 +1,13 @@
+#main_nav a, #sidebar-links li a {
+    border-bottom: 2px solid transparent;
+}
+
+#main_nav a.active
+ {
+    border-bottom: 2px solid white;
+}
+
+#sidebar-links li a.active {
+    color: rgb(239, 102, 34);
+    font-weight: bold;
+}

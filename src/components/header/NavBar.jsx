@@ -1,27 +1,27 @@
 import React from "react";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 
 const NavBar = () => {
     return (
         <div>
-            <nav className="bg-gray-800 p-4 flex justify-between items-center">
+            <nav id="main_nav" className="bg-gray-800 p-4 flex justify-between items-center">
                 <div className="text-white text-lg font-bold">React Router</div>
                 <ul className="flex space-x-4">
-                    <Link to="/" className="text-white hover:text-gray-400">
+                    <NavLink to="/" className="text-white hover:text-gray-400">
                         Home
-                    </Link>
-                    <Link
+                    </NavLink>
+                    <NavLink
                         to="/about"
                         className="text-white hover:text-gray-400"
                     >
                         About
-                    </Link>
-                    <Link
+                    </NavLink>
+                    <NavLink
                         to="/contact"
                         className="text-white hover:text-gray-400"
                     >
                         Contact
-                    </Link>
+                    </NavLink>
                 </ul>
             </nav>
         </div>
