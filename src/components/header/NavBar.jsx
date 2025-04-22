@@ -1,11 +1,16 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const NavBar = () => {
     return (
         <div>
-            <nav id="main_nav" className="bg-gray-800 p-4 flex justify-between items-center">
-                <div className="text-white text-lg font-bold">React Router</div>
+            <nav
+                id="main_nav"
+                className="bg-gray-800 p-4 flex justify-between items-center"
+            >
+                <div className="text-white text-lg font-bold">
+                    <Link to='/'>React Router</Link>
+                </div>
                 <ul className="flex space-x-4">
                     <NavLink to="/" className="text-white hover:text-gray-400">
                         Home
