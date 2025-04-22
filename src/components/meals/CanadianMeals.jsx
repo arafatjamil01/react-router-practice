@@ -3,7 +3,6 @@ import { useLoaderData } from "react-router";
 
 const CanadianMeals = () => {
     const canadianMeals = useLoaderData();
-    console.log(canadianMeals.meals); // Check the data structure in the console
 
     return (
         <div>

@@ -19,7 +19,7 @@ let router = createBrowserRouter([
         children: [
             { index: true, Component: MealLanding },
             { path: "/canadian_meals", Component: CanadianMeals, loader: () => fetch("https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian") },
-            { path: "/meal_categories", Component: MealCategories },
+            { path: "/meal_categories", Component: MealCategories, loader: () => fetch("https://www.themealdb.com/api/json/v1/1/categories.php") },
             { path: "/single_random_meal", Component: SingleRandomMeal, loader: () => fetch("https://www.themealdb.com/api/json/v1/1/random.php") },
         ],
     },
